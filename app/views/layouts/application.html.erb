@@ -13,6 +13,20 @@
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
 
+    <section class="top">
+      <%= link_to 'MembersOnly', root_path %>
+
+      <ul>
+        <% if user_signed_in? %>
+        <li>Welcome, <%= current_user.name %></li>
+        <li><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></li>
+        <% else %>
+        <li><%= link_to 'Sign In', new_user_session_path %></li>
+        <li><%= link_to 'Sign Up', new_user_registration_path %></li>
+        <% end %>
+      </ul>
+    </section>
+
     <%= yield %>
   </body>
 </html>
