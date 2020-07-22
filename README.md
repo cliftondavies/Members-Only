@@ -4,7 +4,7 @@
 
 ## Functionality
 
-- User Account: Users can sign Up, sign in and sign out
+- User Account: Users can sign up, sign in and sign out
 - Post: Users can create new posts and view a list of all posts.
 
 ## :toolbox: Tools & Technologies Used
@@ -37,9 +37,12 @@ cd [directory-name]
 ```
 6. Bulk install dependencies
 ```
-bundle
+bundle install
 ```
 7. Set up database
+```
+rails db:create
+```
 ```
 rake db:migrate
 ```
