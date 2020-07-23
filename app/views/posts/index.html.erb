@@ -1,0 +1,13 @@
+<h1>Posts</h1>
+
+<section>
+  <% @posts.each do |post| %>
+  <article>
+    <h2><%= post.title %></h2>
+    <p><%= post.body %></p>
+    <span><%= author_name(post) %></span>
+  </article>
+  <% end %>
+</section><br>
+
+<%= link_to 'New Post', new_post_path %>
